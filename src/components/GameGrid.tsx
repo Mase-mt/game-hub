@@ -4,14 +4,14 @@ import GameCard from './GameCard';
 import GameCardSkeleton from './GameCardSkeleton';
 import GameCardContaier from './GameCardContaier';
 import { Genres } from '../hooks/useGeneres';
+import { GameQuery } from '../App';
 
 interface props{
-  selectedGenre: Genres | null;
-  selectedPlatform: platform | null;
+  gameQuery: GameQuery;
 }
 
-function GameGrid({selectedGenre, selectedPlatform}: props) {
-    const {data, error, isLoading} = useGames(selectedGenre, selectedPlatform);
+function GameGrid({gameQuery}: props) {
+    const {data, error, isLoading} = useGames(gameQuery);
 
     const skeletons = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
     
