@@ -14,13 +14,13 @@ function GameCard({game}: props) {
     <Card height='350px'>
         <Image src={getCroppedImage(game.background_image)}/>
         <CardBody>
-            <Heading fontSize='2xl'>
-                {game.name}
-            </Heading>
-            <HStack justifyContent='space-between'>
+            <HStack justifyContent='space-between' marginBottom='4px'>
             <PlatformIconsList platforms={game.parent_platforms.map(p=>p.platform)}/>
             <CriticScore score={game.metacritic}/>  
             </HStack>
+            <Heading fontSize='2xl'>
+                {game.name}
+            </Heading>
         </CardBody>
     </Card>
   )
