@@ -16,7 +16,7 @@ function Emoji({rating}: props) {
         5: {src: bullsEye, alt: 'exceptional', boxSize:'25px'}
     }
 
-  return (
+  return ( 
     <Image {...emojiMap[rating]} marginTop={1}/>
   )
 }
